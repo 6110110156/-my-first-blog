@@ -1,11 +1,16 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 <div>
-    <h1><a href="/">Django Girls Blog</a></h1>
+    <title>Page Title</title>
+    <h1><a href="/">MY Blog</a></h1>
+    <p>Welcome to my world</p>
 </div>
 
 {% for post in posts %}
     <div>
-        <p>published: {{ post.published_date }}</p>
         <h2><a href="">{{ post.title }}</a></h2>
         <p>{{ post.text|linebreaksbr }}</p>
+        <p>By:{{ post.author }}</p> 
+        <p>published: {{ post.published_date }}</p>
     </div>
 {% endfor %}
